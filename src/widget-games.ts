@@ -100,6 +100,11 @@ export const games = defineWidget({
   options,
   redraw: 'minute',
   idle: (ctx) => !dataOf(ctx.sources)?.games?.waiting.length,
+  // Read, but no games to list: no token, the token refused, games switched off or none waiting for you.
+  empty: (ctx) => {
+    const d = dataOf(ctx.sources);
+    return !!d && !d.games?.waiting.length;
+  },
   render: (g, ctx) => renderGames(g, ctx as Ctx),
   demo: ({ now }) => ({ sources: { [SOURCE]: demoData(now) } }),
 });

@@ -266,6 +266,11 @@ export const puzzle = defineWidget({
     const data = dataOf(ctx.sources);
     return data?.start && ctx.options.animate && revealed(data, ctx.options, ctx.now) ? { everyMs: STEP_MS } : 'minute';
   },
+  // Read, but no puzzle: Lichess could not be reached for today's.
+  empty: (ctx) => {
+    const d = dataOf(ctx.sources);
+    return !!d && !d.start;
+  },
   render: (g, ctx) => renderPuzzle(g, ctx as Ctx),
   demo: ({ now }) => ({ sources: { [SOURCE]: demoData(now) } }),
 });

@@ -119,3 +119,15 @@ test('games: how many wait, each opponent with the time left; a message without 
   assert.equal(widgetState(games, 'idle', { sources: { [SOURCE]: v['no games']! } }), true);
   assert.equal(widgetState(games, 'idle', { now: NOON }), false);
 });
+
+test('empty: the puzzle without a puzzle, the games without games to list; never before the first read', () => {
+  const v = Object.fromEntries(variants().map(([n, d]) => [n, d]));
+  const empty = (w: WidgetDefinition<any, any>, data?: ChessData) => widgetState(w, 'empty', data ? { now: NOON, sources: { [SOURCE]: data } } : { now: NOON, demo: false });
+  assert.equal(empty(puzzle, v['down']), true);
+  assert.equal(empty(puzzle, v['demo']), false);
+  assert.equal(empty(puzzle, v['no token']), false);
+  assert.equal(empty(puzzle), false);
+  for (const n of ['no token', 'refused', 'no games', 'down']) assert.equal(empty(games, v[n]), true, n);
+  assert.equal(empty(games, v['demo']), false);
+  assert.equal(empty(games), false);
+});

@@ -1,6 +1,6 @@
 {
   "name": "kiosko-plugin-chess",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The daily chess puzzle of Lichess on your Kiosko panel: the position, its rating and themes, and its solution once solved; solve it from Kiosko's Play page with a game controller or the keyboard. With a token, your puzzle rating and the games waiting for your move.",
   "type": "module",
   "license": "MIT",
