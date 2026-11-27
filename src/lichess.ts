@@ -10,7 +10,7 @@ import { createHttp, HttpError, type HttpClient } from '@kiosko/sdk';
 import { parsePuzzle, type LichessPuzzle } from './puzzle.ts';
 import { utcDay } from './store.ts';
 
-export const VERSION = '0.1.0';
+export const VERSION = '0.1.1';
 export const AGENT = `kiosko-plugin-chess/${VERSION}`;
 export const HOST = 'lichess.org';
 const BASE = `https://${HOST}`;
