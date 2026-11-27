@@ -1,0 +1,493 @@
+{
+  "manifest": 1,
+  "id": "chess",
+  "package": "kiosko-plugin-chess",
+  "name": {
+    "en": "Chess puzzle of the day",
+    "es": "Problema de ajedrez del día",
+    "de": "Schachaufgabe des Tages",
+    "zh-Hans": "每日国际象棋谜题",
+    "zh-Hant": "每日西洋棋謎題"
+  },
+  "version": "0.1.0",
+  "description": {
+    "en": "The daily chess puzzle of Lichess on your panel: the position, its rating and themes, and its solution once you solve it; solve it from Kiosko’s Play page with a game controller or the keyboard. With a Lichess token, your puzzle rating and the games waiting for your move.",
+    "es": "El problema de ajedrez del día de Lichess en tu panel: la posición, su nivel y sus temas, y la solución una vez resuelto; resuélvelo desde la página Jugar de Kiosko con un mando o el teclado. Con un token de Lichess, tu nivel en problemas y las partidas que esperan tu jugada.",
+    "de": "Die Schachaufgabe des Tages von Lichess auf deinem Panel: die Stellung, ihre Wertung und Themen, und die Lösung, sobald du sie gelöst hast; lös sie auf Kioskos Seite „Spielen“ mit Controller oder Tastatur. Mit einem Lichess-Token deine Aufgabenwertung und die Partien, die auf deinen Zug warten.",
+    "zh-Hans": "在副屏上显示 Lichess 的每日国际象棋谜题：局面、难度和主题，解出后显示答案；在 Kiosko 的“游戏”页面用手柄或键盘解题。填写 Lichess 令牌后，还能看到你的谜题等级分和等你走棋的对局。",
+    "zh-Hant": "在面板上顯示 Lichess 的每日西洋棋謎題：局面、難度和主題，解出後顯示答案；在 Kiosko 的「遊戲」頁面用手把或鍵盤解題。填入 Lichess 權杖後，還能看到你的謎題等級分和等你走棋的對局。"
+  },
+  "author": "Loksly",
+  "license": "MIT",
+  "homepage": "https://github.com/kiosko-lcd/kiosko-plugin-chess#readme",
+  "repository": "https://github.com/kiosko-lcd/kiosko-plugin-chess",
+  "icon": "chess-knight",
+  "sdk": "^0.2.0",
+  "platforms": [
+    "linux",
+    "darwin",
+    "win32"
+  ],
+  "languages": [
+    "en",
+    "es",
+    "de",
+    "zh-Hant",
+    "zh-Hans"
+  ],
+  "categories": [
+    "fun"
+  ],
+  "tags": [
+    "chess",
+    "lichess",
+    "puzzle",
+    "correspondence"
+  ],
+  "permissions": {
+    "network": [
+      "lichess.org"
+    ]
+  },
+  "riskyOptions": [
+    {
+      "path": "chess/lichess: token",
+      "risk": [],
+      "secret": true
+    }
+  ],
+  "requires": [],
+  "optional": [],
+  "widgets": [
+    {
+      "type": "chess/puzzle",
+      "name": {
+        "en": "Puzzle of the day",
+        "es": "Problema del día",
+        "de": "Aufgabe des Tages",
+        "zh-Hans": "每日谜题",
+        "zh-Hant": "每日謎題"
+      },
+      "description": {
+        "en": "The daily puzzle of Lichess: the position from your side with the last move marked, whose move it is, its rating and themes. Once you solve it (or in the evening) the solution plays on the board. Solve it from Kiosko’s Play page with the “Chess puzzle” interlude.",
+        "es": "El problema del día de Lichess: la posición desde tu lado con la última jugada marcada, a quién le toca, su nivel y sus temas. Al resolverlo (o por la noche) la solución se reproduce en el tablero. Resuélvelo desde la página Jugar de Kiosko con el interludio «Problema de ajedrez».",
+        "de": "Die Tagesaufgabe von Lichess: die Stellung aus deiner Sicht mit markiertem letztem Zug, wer am Zug ist, Wertung und Themen. Wenn du sie gelöst hast (oder abends), läuft die Lösung auf dem Brett ab. Löse sie auf Kioskos Seite „Spielen“ mit dem Zwischenspiel „Schachaufgabe“.",
+        "zh-Hans": "Lichess 的每日谜题：从你这一方看的局面（标出上一步）、轮到谁走、难度和主题。解出后（或到晚上）答案会在棋盘上演示。在 Kiosko 的“游戏”页面用“国际象棋谜题”过场动画来解题。",
+        "zh-Hant": "Lichess 的每日謎題：從你這一方看的局面（標出上一步）、輪到誰走、難度和主題。解出後（或到晚上）答案會在棋盤上演示。在 Kiosko 的「遊戲」頁面用「西洋棋謎題」過場動畫來解題。"
+      },
+      "icon": "chess-knight",
+      "category": "fun",
+      "tags": [
+        "chess",
+        "lichess",
+        "puzzle"
+      ],
+      "size": {
+        "min": {
+          "w": 120,
+          "h": 36
+        },
+        "preferred": {
+          "w": 480,
+          "h": 240
+        }
+      },
+      "chrome": "card",
+      "sources": [
+        "chess/lichess"
+      ],
+      "options": {
+        "default": {
+          "board": "wood",
+          "coordinates": true,
+          "reveal": "evening",
+          "revealHour": 20,
+          "animate": true
+        },
+        "x-ui": {},
+        "type": "object",
+        "properties": {
+          "board": {
+            "title": "Board",
+            "default": "wood",
+            "x-ui": {
+              "label": {
+                "en": "Board",
+                "es": "Tablero",
+                "de": "Brett",
+                "zh-Hans": "棋盘",
+                "zh-Hant": "棋盤"
+              },
+              "labels": {
+                "wood": {
+                  "en": "Wood",
+                  "es": "Madera",
+                  "de": "Holz",
+                  "zh-Hans": "木纹",
+                  "zh-Hant": "木紋"
+                },
+                "slate": {
+                  "en": "Slate",
+                  "es": "Pizarra",
+                  "de": "Schiefer",
+                  "zh-Hans": "石板",
+                  "zh-Hant": "石板"
+                }
+              }
+            },
+            "type": "string",
+            "enum": [
+              "wood",
+              "slate"
+            ]
+          },
+          "coordinates": {
+            "title": "Coordinates",
+            "description": "Letters and numbers on the edge squares, when they are big enough.",
+            "default": true,
+            "x-ui": {
+              "label": {
+                "en": "Coordinates",
+                "es": "Coordenadas",
+                "de": "Koordinaten",
+                "zh-Hans": "坐标",
+                "zh-Hant": "座標"
+              },
+              "help": {
+                "en": "Letters and numbers on the edge squares, when they are big enough.",
+                "es": "Letras y números en las casillas del borde, cuando son bastante grandes.",
+                "de": "Buchstaben und Zahlen auf den Randfeldern, wenn sie groß genug sind.",
+                "zh-Hans": "棋盘够大时，在边缘格子上显示字母和数字。",
+                "zh-Hant": "棋盤夠大時，在邊緣格子上顯示字母和數字。"
+              }
+            },
+            "type": "boolean"
+          },
+          "reveal": {
+            "title": "Show the solution",
+            "default": "evening",
+            "x-ui": {
+              "label": {
+                "en": "Show the solution",
+                "es": "Mostrar la solución",
+                "de": "Lösung zeigen",
+                "zh-Hans": "显示答案",
+                "zh-Hant": "顯示答案"
+              },
+              "labels": {
+                "evening": {
+                  "en": "Once solved, or from the hour below",
+                  "es": "Al resolverlo, o desde la hora de abajo",
+                  "de": "Wenn gelöst, oder ab der Uhrzeit unten",
+                  "zh-Hans": "解出后，或从下面的时间起",
+                  "zh-Hant": "解出後，或從下面的時間起"
+                },
+                "solved": {
+                  "en": "Only once solved or given up",
+                  "es": "Solo al resolverlo o rendirse",
+                  "de": "Nur wenn gelöst oder aufgegeben",
+                  "zh-Hans": "仅在解出或放弃后",
+                  "zh-Hant": "僅在解出或放棄後"
+                },
+                "never": {
+                  "en": "Never",
+                  "es": "Nunca",
+                  "de": "Nie",
+                  "zh-Hans": "从不",
+                  "zh-Hant": "從不"
+                }
+              }
+            },
+            "type": "string",
+            "enum": [
+              "evening",
+              "solved",
+              "never"
+            ]
+          },
+          "revealHour": {
+            "title": "Solution from (hour)",
+            "default": 20,
+            "x-ui": {
+              "label": {
+                "en": "Solution from (hour)",
+                "es": "Solución desde (hora)",
+                "de": "Lösung ab (Uhr)",
+                "zh-Hans": "答案显示时间（时）",
+                "zh-Hant": "答案顯示時間（時）"
+              }
+            },
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 23
+          },
+          "animate": {
+            "title": "Play the solution on the board",
+            "description": "One move every two seconds (a frame each).",
+            "default": true,
+            "x-ui": {
+              "label": {
+                "en": "Play the solution on the board",
+                "es": "Reproducir la solución en el tablero",
+                "de": "Lösung auf dem Brett abspielen",
+                "zh-Hans": "在棋盘上演示答案",
+                "zh-Hant": "在棋盤上演示答案"
+              },
+              "help": {
+                "en": "One move every two seconds (a frame each).",
+                "es": "Una jugada cada dos segundos (un fotograma cada una).",
+                "de": "Ein Zug alle zwei Sekunden (je ein Bild).",
+                "zh-Hans": "每两秒走一步（每步一帧）。",
+                "zh-Hant": "每兩秒走一步（每步一幀）。"
+              }
+            },
+            "type": "boolean"
+          }
+        }
+      },
+      "screenshot": "docs/puzzle.png",
+      "animated": false,
+      "urgent": false
+    },
+    {
+      "type": "chess/games",
+      "name": {
+        "en": "Your Lichess games",
+        "es": "Tus partidas de Lichess",
+        "de": "Deine Lichess-Partien",
+        "zh-Hans": "你的 Lichess 对局",
+        "zh-Hant": "你的 Lichess 對局"
+      },
+      "description": {
+        "en": "The Lichess games waiting for your move (correspondence and others), the most urgent one’s board and the time you have left. Needs a Lichess token in Settings → Data sources.",
+        "es": "Las partidas de Lichess que esperan tu jugada (por correspondencia y otras), el tablero de la más urgente y el tiempo que te queda. Necesita un token de Lichess en Ajustes → Fuentes de datos.",
+        "de": "Die Lichess-Partien, die auf deinen Zug warten (Fernschach und andere), das Brett der dringendsten und deine Restzeit. Braucht ein Lichess-Token unter Einstellungen → Datenquellen.",
+        "zh-Hans": "等你走棋的 Lichess 对局（通信对局等），最紧急那局的棋盘和你剩余的时间。需要在 设置 → 数据源 中填写 Lichess 令牌。",
+        "zh-Hant": "等你走棋的 Lichess 對局（通訊對局等），最緊急那局的棋盤和你剩餘的時間。需要在 設定 → 資料來源 中填入 Lichess 權杖。"
+      },
+      "icon": "chess-pawn",
+      "category": "fun",
+      "tags": [
+        "chess",
+        "lichess",
+        "correspondence"
+      ],
+      "size": {
+        "min": {
+          "w": 120,
+          "h": 36
+        },
+        "preferred": {
+          "w": 400,
+          "h": 160
+        }
+      },
+      "chrome": "card",
+      "sources": [
+        "chess/lichess"
+      ],
+      "options": {
+        "default": {
+          "board": "wood",
+          "coordinates": true
+        },
+        "x-ui": {},
+        "type": "object",
+        "properties": {
+          "board": {
+            "title": "Board",
+            "default": "wood",
+            "x-ui": {
+              "label": {
+                "en": "Board",
+                "es": "Tablero",
+                "de": "Brett",
+                "zh-Hans": "棋盘",
+                "zh-Hant": "棋盤"
+              },
+              "labels": {
+                "wood": {
+                  "en": "Wood",
+                  "es": "Madera",
+                  "de": "Holz",
+                  "zh-Hans": "木纹",
+                  "zh-Hant": "木紋"
+                },
+                "slate": {
+                  "en": "Slate",
+                  "es": "Pizarra",
+                  "de": "Schiefer",
+                  "zh-Hans": "石板",
+                  "zh-Hant": "石板"
+                }
+              }
+            },
+            "type": "string",
+            "enum": [
+              "wood",
+              "slate"
+            ]
+          },
+          "coordinates": {
+            "title": "Coordinates",
+            "description": "Letters and numbers on the edge squares, when they are big enough.",
+            "default": true,
+            "x-ui": {
+              "label": {
+                "en": "Coordinates",
+                "es": "Coordenadas",
+                "de": "Koordinaten",
+                "zh-Hans": "坐标",
+                "zh-Hant": "座標"
+              },
+              "help": {
+                "en": "Letters and numbers on the edge squares, when they are big enough.",
+                "es": "Letras y números en las casillas del borde, cuando son bastante grandes.",
+                "de": "Buchstaben und Zahlen auf den Randfeldern, wenn sie groß genug sind.",
+                "zh-Hans": "棋盘够大时，在边缘格子上显示字母和数字。",
+                "zh-Hant": "棋盤夠大時，在邊緣格子上顯示字母和數字。"
+              }
+            },
+            "type": "boolean"
+          }
+        }
+      },
+      "screenshot": "docs/games.png",
+      "animated": false,
+      "urgent": false
+    }
+  ],
+  "sources": [
+    {
+      "type": "chess/lichess",
+      "name": {
+        "en": "Lichess",
+        "es": "Lichess",
+        "de": "Lichess",
+        "zh-Hans": "Lichess",
+        "zh-Hant": "Lichess"
+      },
+      "description": {
+        "en": "The daily puzzle of Lichess, asked once a day; with a token, your puzzle rating and the games waiting for your move. Read every minute from what is kept here, Lichess itself only when something is due.",
+        "es": "El problema del día de Lichess, una vez al día; con token, tu nivel en problemas y las partidas que esperan tu jugada. Se lee cada minuto de lo guardado aquí; a Lichess solo se le pregunta cuando toca.",
+        "de": "Die Tagesaufgabe von Lichess, einmal am Tag abgefragt; mit Token deine Aufgabenwertung und die Partien, die auf deinen Zug warten. Jede Minute aus dem hier Gespeicherten gelesen, Lichess selbst nur, wenn etwas fällig ist.",
+        "zh-Hans": "Lichess 的每日谜题，每天读取一次；有令牌时还有你的谜题等级分和等你走棋的对局。每分钟从本地保存的数据读取，只在需要时才访问 Lichess。",
+        "zh-Hant": "Lichess 的每日謎題，每天讀取一次；有權杖時還有你的謎題等級分和等你走棋的對局。每分鐘從本機儲存的資料讀取，只在需要時才連線 Lichess。"
+      },
+      "polled": true,
+      "intervalMs": 60000,
+      "options": {
+        "default": {
+          "token": "",
+          "games": true
+        },
+        "x-ui": {},
+        "type": "object",
+        "properties": {
+          "token": {
+            "title": "Lichess token (optional)",
+            "description": "Only for your puzzle rating and the games waiting for your move. Create one at lichess.org/account/oauth/token with “Read puzzle activity” and nothing else. The daily puzzle needs none. Secret: leave it empty (or a placeholder such as \"<token>\"). Kiosko keeps the value it already has, or asks for it in the editor.",
+            "default": "",
+            "x-ui": {
+              "label": {
+                "en": "Lichess token (optional)",
+                "es": "Token de Lichess (opcional)",
+                "de": "Lichess-Token (optional)",
+                "zh-Hans": "Lichess 令牌（可选）",
+                "zh-Hant": "Lichess 權杖（選填）"
+              },
+              "help": {
+                "en": "Only for your puzzle rating and the games waiting for your move. Create one at lichess.org/account/oauth/token with “Read puzzle activity” and nothing else. The daily puzzle needs none.",
+                "es": "Solo para tu nivel en problemas y las partidas que esperan tu jugada. Créalo en lichess.org/account/oauth/token con «Leer la actividad de problemas» y nada más. El problema del día no lo necesita.",
+                "de": "Nur für deine Aufgabenwertung und die Partien, die auf deinen Zug warten. Erstelle es unter lichess.org/account/oauth/token mit „Aufgabenaktivität lesen“ und sonst nichts. Die Aufgabe des Tages braucht keins.",
+                "zh-Hans": "仅用于显示你的谜题等级分和等你走棋的对局。在 lichess.org/account/oauth/token 创建，只勾选“读取谜题活动”。每日谜题不需要令牌。",
+                "zh-Hant": "僅用於顯示你的謎題等級分和等你走棋的對局。在 lichess.org/account/oauth/token 建立，只勾選「讀取謎題活動」。每日謎題不需要權杖。"
+              },
+              "secret": true,
+              "placeholder": "lip_…"
+            },
+            "x-secret": true,
+            "type": "string"
+          },
+          "games": {
+            "title": "Read my games in progress",
+            "description": "With a token: the correspondence games waiting for your move, every 5 minutes.",
+            "default": true,
+            "x-ui": {
+              "label": {
+                "en": "Read my games in progress",
+                "es": "Leer mis partidas en curso",
+                "de": "Meine laufenden Partien lesen",
+                "zh-Hans": "读取我进行中的对局",
+                "zh-Hant": "讀取我進行中的對局"
+              },
+              "help": {
+                "en": "With a token: the correspondence games waiting for your move, every 5 minutes.",
+                "es": "Con token: las partidas por correspondencia que esperan tu jugada, cada 5 minutos.",
+                "de": "Mit Token: die Fernschachpartien, die auf deinen Zug warten, alle 5 Minuten.",
+                "zh-Hans": "有令牌时：每 5 分钟读取一次等你走棋的通信对局。",
+                "zh-Hant": "有權杖時：每 5 分鐘讀取一次等你走棋的通訊對局。"
+              }
+            },
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  ],
+  "interludes": [
+    {
+      "type": "chess/play",
+      "name": {
+        "en": "Chess puzzle",
+        "es": "Problema de ajedrez",
+        "de": "Schachaufgabe",
+        "zh-Hans": "国际象棋谜题",
+        "zh-Hant": "西洋棋謎題"
+      },
+      "description": {
+        "en": "The daily puzzle of Lichess, to solve from Kiosko’s Play page with a game controller or the keyboard: move the cursor, pick a piece up (its legal moves are marked) and put it down. A wrong move shakes the board; a right one gets the opponent’s answer, until it is solved. Y gives a hint, Select twice gives up. At its time slot it shows the puzzle, and its solution once solved or in the evening.",
+        "es": "El problema del día de Lichess, para resolverlo desde la página Jugar de Kiosko con un mando o el teclado: mueve el cursor, coge una pieza (se marcan sus jugadas legales) y suéltala. Una jugada equivocada sacude el tablero; una buena trae la respuesta del rival, hasta resolverlo. Y da una pista, Select dos veces te rinde. A su hora muestra el problema, y la solución una vez resuelto o por la noche.",
+        "de": "Die Tagesaufgabe von Lichess, zu lösen auf Kioskos Seite „Spielen“ mit Controller oder Tastatur: Cursor bewegen, Figur aufnehmen (ihre legalen Züge werden markiert) und absetzen. Ein falscher Zug schüttelt das Brett; ein richtiger bringt die Antwort des Gegners, bis sie gelöst ist. Y gibt einen Tipp, zweimal Select gibt auf. Zu seiner Zeit zeigt es die Aufgabe, und die Lösung, wenn gelöst oder abends.",
+        "zh-Hans": "Lichess 的每日谜题，在 Kiosko 的“游戏”页面用手柄或键盘来解：移动光标，拿起棋子（会标出它的合法走法）再放下。走错棋盘会晃动；走对了对手会应着，直到解出。Y 给提示，按两次 Select 放弃。到时间时显示谜题，解出后或到晚上显示答案。",
+        "zh-Hant": "Lichess 的每日謎題，在 Kiosko 的「遊戲」頁面用手把或鍵盤來解：移動游標，拿起棋子（會標出它的合法走法）再放下。走錯棋盤會晃動；走對了對手會應著，直到解出。Y 給提示，按兩次 Select 放棄。到時間時顯示謎題，解出後或到晚上顯示答案。"
+      },
+      "icon": "chess-knight",
+      "fps": 15,
+      "input": true,
+      "preview": {
+        "poster": "docs/play.jpg",
+        "video": "docs/play.webm"
+      }
+    }
+  ],
+  "templates": [
+    {
+      "id": "chess",
+      "name": {
+        "en": "Chess",
+        "es": "Ajedrez",
+        "de": "Schach",
+        "zh-Hans": "国际象棋",
+        "zh-Hant": "西洋棋"
+      },
+      "icon": "chess-knight",
+      "widgets": [
+        "chess/puzzle",
+        "chess/games"
+      ],
+      "layouts": [
+        "wide",
+        "tall"
+      ]
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/kiosko-lcd/kiosko-plugin-chess/issues",
+    "docs": "https://github.com/kiosko-lcd/kiosko-plugin-chess#readme"
+  },
+  "resources": {
+    "memoryMb": 10,
+    "cpu": "low"
+  }
+}

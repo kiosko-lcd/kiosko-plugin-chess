@@ -1,0 +1,4 @@
+/** A real daily puzzle of Lichess (3Ksou, 27 November 2026), for the demo and the gallery. */
+import type { LichessPuzzle } from './puzzle.ts';
+
+export const DEMO_PUZZLE: LichessPuzzle = {"game": {"id": "rgGubL5i", "perf": {"key": "blitz", "name": "Blitz"}, "rated": true, "players": [{"name": "Kumbara_BKD", "id": "kumbara_bkd", "color": "white", "rating": 2229}, {"name": "renr8360", "id": "renr8360", "color": "black", "rating": 2356}], "pgn": "Nf3 Nf6 d4 e6 c4 d5 Nc3 Bb4 e3 O-O Be2 Nc6 O-O Ne7 a3 Bxc3 bxc3 Ng6 cxd5 exd5 c4 c6 Bb2 Re8 Rc1 Bf5 Qb3 b6 a4 Ne4 cxd5 cxd5 Rc2 Ng5 Rcc1 Be4 Nd2 Nh3+ Kh1 Bxg2+ Kxg2 Qg5+ Kxh3 Re6 Rg1", "clock": "3+0"}, "puzzle": {"id": "3Ksou", "rating": 1969, "plays": 118424, "solution": ["g6f4", "e3f4", "e6h6", "e2h5", "h6h5"], "themes": ["exposedKing", "clearance", "middlegame", "long", "mateIn3", "sacrifice"], "fen": "r5k1/p4ppp/1p2r1n1/3p2q1/P2P4/1Q2P2K/1B1NBP1P/2R3R1 b - - 1 1", "lastMove": "f1g1", "initialPly": 44}};

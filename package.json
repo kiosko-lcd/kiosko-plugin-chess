@@ -1,0 +1,82 @@
+{
+  "name": "kiosko-plugin-chess",
+  "version": "0.1.0",
+  "description": "The daily chess puzzle of Lichess on your Kiosko panel: the position, its rating and themes, and its solution once solved; solve it from Kiosko's Play page with a game controller or the keyboard. With a token, your puzzle rating and the games waiting for your move.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Loksly <info@kioskolcd.dev> (https://kioskolcd.dev)",
+  "keywords": [
+    "kiosko",
+    "kiosko-plugin",
+    "lcd",
+    "widgets",
+    "interlude",
+    "chess",
+    "lichess",
+    "puzzle",
+    "daily-puzzle",
+    "correspondence"
+  ],
+  "homepage": "https://github.com/kiosko-lcd/kiosko-plugin-chess#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiosko-lcd/kiosko-plugin-chess.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kiosko-lcd/kiosko-plugin-chess/issues"
+  },
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "kiosko": {
+    "plugin": "./dist/index.js",
+    "id": "chess",
+    "sdk": "^0.2.0",
+    "languages": [
+      "en",
+      "es",
+      "de",
+      "zh-Hant",
+      "zh-Hans"
+    ],
+    "manifest": "./kiosko-manifest.json"
+  },
+  "os": [
+    "linux",
+    "darwin",
+    "win32"
+  ],
+  "files": [
+    "dist",
+    "docs",
+    "kiosko-manifest.json",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --conditions=source --test \"src/**/*.test.ts\"",
+    "check": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@kiosko/sdk": "^0.2.0"
+  },
+  "devDependencies": {
+    "@kiosko/core": "^0.2.11",
+    "@kiosko/sdk": "^0.2.11",
+    "@loksly/lcd-canvas-kit": "^0.2.0",
+    "@napi-rs/canvas": "^1.0.10",
+    "@types/node": "^24.0.0",
+    "chess.js": "1.4.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.9.3"
+  }
+}

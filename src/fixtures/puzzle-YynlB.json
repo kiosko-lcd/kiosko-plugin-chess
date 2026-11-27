@@ -1,0 +1,52 @@
+{
+  "game": {
+    "id": "MhO5lDuf",
+    "perf": {
+      "key": "blitz",
+      "name": "Blitz"
+    },
+    "rated": true,
+    "players": [
+      {
+        "name": "speshu",
+        "title": "FM",
+        "flair": "activity.running-shirt",
+        "patron": true,
+        "patronColor": 10,
+        "id": "speshu",
+        "color": "white",
+        "rating": 2245
+      },
+      {
+        "name": "BabaRamdev",
+        "title": "GM",
+        "flair": "activity.lichess-hogger",
+        "patron": true,
+        "patronColor": 10,
+        "id": "babaramdev",
+        "color": "black",
+        "rating": 2668
+      }
+    ],
+    "pgn": "d4 Nf6 c4 d5 cxd5 g6 Nf3 Nxd5 e4 Nb6 Nc3 Bg7 Be3 O-O Be2 Nc6 O-O Bg4 d5 Na5 Bd4 Bxf3 Bxf3 Bxd4 Qxd4 c6 Qb4 Nac4 dxc6 bxc6 Rad1 Qc7 Qc5 Nxb2 Rd4 Rfd8 e5 Rxd4 Qxd4 Rd8 Qc5 Nd3 Qxc6 Qxc6 Bxc6 Nxe5 Be4 Rd2 Rd1 Rb2 f4 Nec4 Rd8+ Kg7 Rb8 Rd2 Rb7 e6 Rxa7 Nd5 Nxd5 exd5 Bf3 Ne3 a4 d4 a5 d3 Rd7 Ra2 Rxd3 Nc4 Rc3 Nxa5 h3 Rd2 Kh2 Rd7 Kg3 Re7 h4 h5 Rc5 Nb3 Rd5 Rc7 f5 Nc5 fxg6 fxg6 Rd6 Nd7 Be4 Nf8 Bd3 Re7 Kf4 Rf7+ Kg5",
+    "clock": "3+0"
+  },
+  "puzzle": {
+    "id": "YynlB",
+    "rating": 1339,
+    "plays": 2812,
+    "solution": [
+      "f8h7"
+    ],
+    "themes": [
+      "endgame",
+      "master",
+      "masterVsMaster",
+      "oneMove",
+      "mateIn1"
+    ],
+    "fen": "5n2/5rk1/3R2p1/6Kp/7P/3B4/6P1/8 b - - 1 1",
+    "lastMove": "f4g5",
+    "initialPly": 98
+  }
+}

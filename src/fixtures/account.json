@@ -1,0 +1,115 @@
+{
+  "id": "bobby",
+  "username": "Bobby",
+  "perfs": {
+    "bullet": {
+      "games": 203,
+      "rating": 1755,
+      "rd": 90,
+      "prog": -8
+    },
+    "blitz": {
+      "games": 674,
+      "rating": 1623,
+      "rd": 64,
+      "prog": 43
+    },
+    "rapid": {
+      "games": 337,
+      "rating": 1824,
+      "rd": 56,
+      "prog": 20
+    },
+    "classical": {
+      "games": 253,
+      "rating": 1756,
+      "rd": 45,
+      "prog": -45
+    },
+    "correspondence": {
+      "games": 115,
+      "rating": 1648,
+      "rd": 56,
+      "prog": 7
+    },
+    "chess960": {
+      "games": 174,
+      "rating": 1649,
+      "rd": 48,
+      "prog": 16
+    },
+    "kingOfTheHill": {
+      "games": 291,
+      "rating": 1781,
+      "rd": 90,
+      "prog": -1
+    },
+    "threeCheck": {
+      "games": 59,
+      "rating": 1622,
+      "rd": 76,
+      "prog": 26
+    },
+    "antichess": {
+      "games": 481,
+      "rating": 1650,
+      "rd": 79,
+      "prog": 42
+    },
+    "atomic": {
+      "games": 609,
+      "rating": 1759,
+      "rd": 80,
+      "prog": 17
+    },
+    "horde": {
+      "games": 57,
+      "rating": 1785,
+      "rd": 106,
+      "prog": -20
+    },
+    "crazyhouse": {
+      "games": 11,
+      "rating": 1795,
+      "rd": 45,
+      "prog": 3
+    },
+    "puzzle": {
+      "games": 334,
+      "rating": 1815,
+      "rd": 75,
+      "prog": 44
+    }
+  },
+  "flair": "symbols.left-luggage",
+  "createdAt": 1792561760182,
+  "profile": {
+    "flag": "MZ",
+    "location": "Bobby City",
+    "bio": "In proportion as exchange bursts its local bonds, and the value of commodities more and more expands into an embodiment of human labour in the abstract, in the same proportion the character of money attaches itself to commodities that are by nature fitted to perform the social function of a universal equivalent. Those commodities are the precious m",
+    "fideRating": 1725,
+    "uscfRating": 1566,
+    "ecfRating": 1641,
+    "rcfRating": 1832,
+    "cfcRating": 1913,
+    "dsbRating": 1839,
+    "links": ""
+  },
+  "seenAt": 1792914495578,
+  "playTime": {
+    "total": 13467,
+    "tv": 0
+  },
+  "url": "https://lichess.org/@/Bobby",
+  "count": {
+    "all": 6417,
+    "rated": 5133,
+    "draw": 685,
+    "loss": 2833,
+    "win": 2899,
+    "bookmark": 0,
+    "playing": 0,
+    "import": 0,
+    "me": 0
+  }
+}

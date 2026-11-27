@@ -1,0 +1,49 @@
+{
+  "game": {
+    "id": "mhvLjfQX",
+    "perf": {
+      "key": "blitz",
+      "name": "Blitz"
+    },
+    "rated": true,
+    "players": [
+      {
+        "name": "miladsami43",
+        "id": "miladsami43",
+        "color": "white",
+        "rating": 1918
+      },
+      {
+        "name": "bakal3086",
+        "id": "bakal3086",
+        "color": "black",
+        "rating": 1569
+      }
+    ],
+    "pgn": "d4 d5 c4 e5 dxe5 d4 Nf3 Nc6 Nbd2 f6 exf6 Qxf6 Nb3 Bb4+ Bd2 Bf5 Nbxd4",
+    "clock": "3+0"
+  },
+  "puzzle": {
+    "id": "8zPl0",
+    "rating": 2291,
+    "plays": 2873,
+    "solution": [
+      "c6d4",
+      "f3d4",
+      "b4d2",
+      "d1d2",
+      "e8c8",
+      "e2e3",
+      "c7c5"
+    ],
+    "themes": [
+      "opening",
+      "veryLong",
+      "castling",
+      "advantage"
+    ],
+    "fen": "r3k1nr/ppp3pp/2n2q2/5b2/1bPN4/5N2/PP1BPPPP/R2QKB1R b KQkq - 0 1",
+    "lastMove": "b3d4",
+    "initialPly": 16
+  }
+}

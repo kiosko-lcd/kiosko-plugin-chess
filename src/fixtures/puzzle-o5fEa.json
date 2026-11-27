@@ -1,0 +1,52 @@
+{
+  "game": {
+    "id": "cW6LXTQp",
+    "perf": {
+      "key": "blitz",
+      "name": "Blitz"
+    },
+    "rated": true,
+    "players": [
+      {
+        "name": "CeMucoToB_MCMK-ussr",
+        "id": "cemucotob_mcmk-ussr",
+        "color": "white",
+        "rating": 1758
+      },
+      {
+        "name": "imaxblue",
+        "id": "imaxblue",
+        "color": "black",
+        "rating": 1772
+      }
+    ],
+    "pgn": "e4 e5 f4 Nf6 Nf3 exf4 e5 Nd5 Bc4 Nb6 Bxf7+ Kxf7 O-O Kg8 c3 Nc6",
+    "clock": "3+0"
+  },
+  "puzzle": {
+    "id": "o5fEa",
+    "rating": 1566,
+    "plays": 21313,
+    "solution": [
+      "d1b3",
+      "d7d5",
+      "e5d6",
+      "b6c4",
+      "b3c4",
+      "c8e6",
+      "c4e6"
+    ],
+    "themes": [
+      "veryLong",
+      "enPassant",
+      "discoveredCheck",
+      "opening",
+      "kingsideAttack",
+      "discoveredAttack",
+      "mateIn4"
+    ],
+    "fen": "r1bq1bkr/pppp2pp/1nn5/4P3/5p2/2P2N2/PP1P2PP/RNBQ1RK1 w - - 1 1",
+    "lastMove": "b8c6",
+    "initialPly": 15
+  }
+}
