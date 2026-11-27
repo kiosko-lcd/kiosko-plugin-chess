@@ -1,9 +1,10 @@
 /**
  * The chess of it: a Lichess puzzle replayed from its game's moves to the
  * position you solve, and the moves you try, checked against the solution.
- * Move generation is chess.js's (BSD-2-Clause, see NOTICE).
+ * Move generation is chess.js's (BSD-2-Clause, see NOTICE), vendored in
+ * src/vendor (see its README).
  */
-import { Chess, type Square } from 'chess.js';
+import { Chess, type Square } from './vendor/chess.js';
 
 export type Color = 'w' | 'b';
 export type PieceType = 'p' | 'n' | 'b' | 'r' | 'q' | 'k';

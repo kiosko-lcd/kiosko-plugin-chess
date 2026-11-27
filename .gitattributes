@@ -1,2 +1,4 @@
 # Fixtures are compared byte for byte: no line-ending conversion on Windows.
 src/fixtures/** -text
+# Vendored files are kept byte for byte as upstream ships them.
+src/vendor/** -text
