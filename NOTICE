@@ -8,6 +8,8 @@ Bundled in dist/index.js:
 
 chess.js 1.4.0 (https://github.com/jhlywa/chess.js), legal move generation,
 SAN and FEN. BSD-2-Clause; about 37 KB of the bundle minified (13 KB gzipped).
+Vendored, unchanged, in src/vendor/chess.js and src/vendor/chess.d.ts (see
+src/vendor/README.md).
 
   Copyright (c) 2025, Jeff Hlywa (jhlywa@gmail.com)
   All rights reserved.

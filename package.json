@@ -75,7 +75,6 @@
     "@loksly/lcd-canvas-kit": "^0.2.0",
     "@napi-rs/canvas": "^1.0.10",
     "@types/node": "^24.0.0",
-    "chess.js": "1.4.0",
     "esbuild": "^0.25.0",
     "typescript": "^5.9.3"
   }
