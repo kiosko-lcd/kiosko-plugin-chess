@@ -49,8 +49,12 @@ export function clipped(g: Graphics, box: { x: number; y: number; w: number; h: 
   }
 }
 
-/** A message in the middle of the box, with an optional second line. */
+/** A message in the middle of the box, with an optional second line; never outside it (fonts differ from system to system). */
 export function drawMessage(g: Graphics, ctx: Ctx, text: string, sub?: string): void {
+  clipped(g, ctx.box, () => paintMessage(g, ctx, text, sub));
+}
+
+function paintMessage(g: Graphics, ctx: Ctx, text: string, sub?: string): void {
   const { box, kit, theme } = ctx;
   const c = theme.colors;
   const size = clamp(Math.round(Math.min(box.h * 0.3, box.w / 12)), MIN_PX, 26);
